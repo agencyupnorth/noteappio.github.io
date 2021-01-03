@@ -107,7 +107,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
                                 <div class="home-dashboard">
-                                    <img src="images/email/home.png" alt="" class="img-fluid rounded-md shadow-lg" style="z-index: -1;">
+                                    <img src="images/home/dashboard.png" alt="" class="img-fluid rounded-md" style="z-index: -1;">
                                 </div>
                             </div>
                         </div><!--end row-->
@@ -327,7 +327,7 @@
                                     <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
                                         <div class="card pricing-rates business-rate shadow bg-white border-0 rounded">
                                             <div class="card-body">
-                                                <h6 class="title font-weight-bold text-uppercase text-primary mb-4">Starter</h6>
+                                                <h6 class="title font-weight-bold text-uppercase text-primary mb-4">Free</h6>
                                                 <div class="d-flex mb-4">
                                                     <span class="h6 mb-0 mt-2">$</span>
                                                     <span class="price h1 mb-0">0</span>
@@ -349,7 +349,7 @@
                                         <div class="card pricing-rates business-rate shadow bg-light border-0 rounded">
                                             <div class="ribbon ribbon-right ribbon-warning overflow-hidden"><span class="text-center d-block shadow small h6">Best</span></div>
                                             <div class="card-body">
-                                                <h6 class="title font-weight-bold text-uppercase text-primary mb-4">Professional</h6>
+                                                <h6 class="title font-weight-bold text-uppercase text-primary mb-4">Starter</h6>
                                                 <div class="d-flex mb-4">
                                                     <span class="h6 mb-0 mt-2">$</span>
                                                     <span class="price h1 mb-0">1.99</span>
@@ -362,7 +362,17 @@
                                                     <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-check-circle align-middle"></i></span>Manage Tasks</li>
                                                     <li class="h6 text-muted mb-0"><span class="text-primary h5 mr-2"><i class="uil uil-check-circle align-middle"></i></span>Manage Notes</li>
                                                 </ul>
-                                                <a href="javascript:void(0)" class="btn btn-primary mt-4">Try It Now</a>
+                                                <!--<a href="javascript:void(0)" class="btn btn-primary mt-4">Try It Now</a>-->
+                                                <button
+                                                    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+                                                    id="checkout-button-price_1I5WQALEu3fLuyz31my5yC88"
+                                                    role="link"
+                                                    type="button"
+                                                    >
+                                                    Get Started
+                                                </button>
+
+                                                <div id="error-message"></div>
                                             </div>
                                         </div>
                                     </div><!--end col-->
@@ -370,7 +380,7 @@
                                     <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
                                         <div class="card pricing-rates business-rate shadow bg-light border-0 rounded">
                                             <div class="card-body">
-                                                <h6 class="title font-weight-bold text-uppercase text-primary mb-4">Enterprise</h6>
+                                                <h6 class="title font-weight-bold text-uppercase text-primary mb-4">Professional</h6>
                                                 <div class="d-flex mb-4">
                                                     <span class="h6 mb-0 mt-2">$</span>
                                                     <span class="price h1 mb-0">3.99</span>
@@ -596,6 +606,44 @@
         <script src="js/feather.min.js"></script>
         <script src="https://unicons.iconscout.com/release/v3.0.3/script/monochrome/bundle.js"></script>
         <!-- Main Js -->
+        <script src="https://js.stripe.com/v3"></script>        
         <script src="js/app.js"></script>
+
+        <script>
+            (function() {
+              var stripe = Stripe('pk_test_51I5WFELEu3fLuyz3aDm3Re3MFNWMhBWjgNgj80ULNqXSm38X4x3boqjA3B7tdHRuSKAHNAm4WPzMsH8YoH4EQOZd00YrsQGxwf');
+            
+              var checkoutButton = document.getElementById('checkout-button-price_1I5WQALEu3fLuyz31my5yC88');
+              checkoutButton.addEventListener('click', function () {
+                /*
+                 * When the customer clicks on the button, redirect
+                 * them to Checkout.
+                 */
+                stripe.redirectToCheckout({
+                  lineItems: [{price: 'price_1I5WQALEu3fLuyz31my5yC88', quantity: 1}],
+                  mode: 'subscription',
+                  /*
+                   * Do not rely on the redirect to the successUrl for fulfilling
+                   * purchases, customers may not always reach the success_url after
+                   * a successful payment.
+                   * Instead use one of the strategies described in
+                   * https://stripe.com/docs/payments/checkout/fulfill-orders
+                   */
+                  successUrl: 'https://your-website.com/success',
+                  cancelUrl: 'https://your-website.com/canceled',
+                })
+                .then(function (result) {
+                  if (result.error) {
+                    /*
+                     * If `redirectToCheckout` fails due to a browser or network
+                     * error, display the localized error message to your customer.
+                     */
+                    var displayError = document.getElementById('error-message');
+                    displayError.textContent = result.error.message;
+                  }
+                });
+              });
+            })();
+        </script>
     </body>
 </html>
