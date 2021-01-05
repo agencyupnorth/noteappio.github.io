@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="321px" height="102px" viewBox="0 0 321 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>logo-ai</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-129.000000, -529.000000)">
+            <g id="logo-ai" transform="translate(129.000000, 529.000000)">
+                <rect id="Rectangle" fill="#1E7979" x="0" y="23" width="65" height="65" rx="8"></rect>
+                <path d="M35.6510539,37 L29.7985948,37 L19.3439333,70.4416136 L23.9249562,70.2802548 L26.4145199,62.7770701 L39.5925059,62.7770701 C43.8922717,71.3694268 49.9836066,75 59.4590164,75 C66.9039813,75 71.8009368,70.6433121 72,70.4416136 L68.9344262,66.9320594 C68.8946136,66.9723992 65.0327869,70.2802548 59.4590164,70.2802548 C49.9039813,70.2802548 44.9672131,65.9639066 41.264637,54.4267516 L35.6510539,37 Z M37,58 L27,58 L31.9794239,42 L36.218107,55.671159 C36.4650206,56.490566 36.7119342,57.2668464 37,58 Z" id="path268670" stroke="#FFFFFF" stroke-width="1.11" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <text id="ssistant" font-family="AvenirNext-Regular, Avenir Next" font-size="75" font-weight="normal" letter-spacing="0.15625" fill="#1E7979">
+                    <tspan x="68.9625" y="75">ssistant</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
