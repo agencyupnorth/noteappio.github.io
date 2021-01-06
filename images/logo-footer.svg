@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="829px" height="229px" viewBox="0 0 829 229" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Group</title>
+<svg width="321px" height="102px" viewBox="0 0 321 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>logo-ai</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop" transform="translate(-98.000000, -63.000000)">
-            <g id="Group" transform="translate(98.000000, 63.000000)">
-                <text id="assistant" font-family="AvenirNext-Medium, Avenir Next" font-size="168" font-weight="400" letter-spacing="-3.05" fill="#FFFFFF">
-                    <tspan x="198" y="168">assistant</tspan>
+        <g id="Desktop" transform="translate(-470.000000, -725.000000)">
+            <g id="logo-ai" transform="translate(470.000000, 725.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" x="0" y="23" width="65" height="65" rx="8"></rect>
+                <path d="M35.6510539,37 L29.7985948,37 L19.3439333,70.4416136 L23.9249562,70.2802548 L26.4145199,62.7770701 L39.5925059,62.7770701 C43.8922717,71.3694268 49.9836166,75 59.4590164,75 C63.949943,75 65.5751358,75 64.3345947,75 L64.3345947,70.2802548 C64.8744196,70.2802548 63.2492269,70.2802548 59.4590164,70.2802548 C49.9039813,70.2802548 44.9672131,65.9639066 41.264637,54.4267516 L35.6510539,37 Z M37,58 L27,58 L31.9794239,42 L36.218107,55.671159 C36.4650206,56.490566 36.7119342,57.2668464 37,58 Z" id="path268670" stroke="#212A42" stroke-width="1.11" fill="#212A42" fill-rule="nonzero"></path>
+                <polygon id="Path" fill="#1E7979" fill-rule="nonzero" points="64.0183957 69.7397522 65 69.7397522 65 75.5375364 64.2464125 75.5375364"></polygon>
+                <text id="ssistant" font-family="AvenirNext-Regular, Avenir Next" font-size="75" font-weight="normal" letter-spacing="0.15625" fill="#FFFFFF">
+                    <tspan x="68.9625" y="75">ssistant</tspan>
                 </text>
-                <g id="Group-2" transform="translate(0.000000, 34.000000)">
-                    <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="162" height="162" rx="24"></rect>
-                    <text id="AI" font-family="ArialRoundedMTBold, Arial Rounded MT Bold" font-size="100" font-weight="normal" letter-spacing="-1.81547619" fill="#202942">
-                        <tspan x="31" y="118">AI</tspan>
-                    </text>
-                </g>
             </g>
         </g>
     </g>
